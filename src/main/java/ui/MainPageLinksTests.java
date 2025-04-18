@@ -1,7 +1,7 @@
 package ui;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import pageObjects.MainPage;
+import page.objects.MainPage;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -23,6 +23,7 @@ public class MainPageLinksTests {
     public void setup() {
         WebDriverManager.chromedriver().setup();
         this.driver = new ChromeDriver();
+        this.driver.manage().window().maximize();
         this.driver.get(this.pageUrl);
     }
 
@@ -35,7 +36,7 @@ public class MainPageLinksTests {
      * Проверяет корректность ссылки и открытия логотипа Яндекса
      */
     @Test
-    public void verifyYandexLogoLink() {
+    public void testVerifyYandexLogoLink() {
         MainPage mainPage = new MainPage(this.driver);
 
         assertTrue(
@@ -53,7 +54,7 @@ public class MainPageLinksTests {
      * Проверяет корректность ссылки логотипа Самоката
      */
     @Test
-    public void verifyScooterLogoLink() {
+    public void testVerifyScooterLogoLink() {
         MainPage mainPage = new MainPage(this.driver);
 
         assertTrue(

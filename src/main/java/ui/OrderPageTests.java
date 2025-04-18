@@ -2,8 +2,8 @@ package ui;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.chrome.ChromeDriver;
-import pageObjects.MainPage;
-import pageObjects.OrderPage;
+import page.objects.MainPage;
+import page.objects.OrderPage;
 import org.hamcrest.MatcherAssert;
 import org.junit.After;
 import org.junit.Before;
